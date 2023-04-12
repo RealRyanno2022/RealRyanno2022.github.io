@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Flask Notes App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Daniel Ryan</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="project_list.html">Project List</a></li>
+							<li><a href="DanielRyanCV.pdf">CV/Resume</a></li>
+							<li><a href="#footer">Contact Me</a></li>
+				
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>REST API</h2>
+								<p>Full Stack Project</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Context</h3>
+									<p> This project was my first time using the Python web framework Flask. I have had previous experience with React, HTML, CSS, Handlebars and Javascript.
+                                        I find the Flask framework to be very versatile, it allows you to seamlessly integrate webpages. This project involved three parts to build the REST API needed for the frontend on the website RealPython.
+                                        Then, I followed a tutorial on the same site to build the rest of the stack. The first step was to create a virtual environment using Powershell and Venv. I made a hello world page to test the server.
+                                        I then used the Connexion module to allow Python to use the OpenAPI Specification with the UI tool Swagger, which involved creating a schema using a .yml file. I returned data in the browser and then initiated a database.
+                                        This involved ising SQLite and the Python interactive shell in VS Code. I connected the database to the Flask project using Marshmallow before serialising the data.
+                                          </p>
+
+									<p> I then connected the database to my API, before writing to it. I added a note sschema to my .yml file to deal with people as well as notes.   </p>
+                                        I adjusted the model to allow multiple entries with the same last name. I nested the HTML templates to allow code to activate there during debug.
+                                        Having the main app and debug mode side by side in the browser allowed for me to view returned data in JSON format. This DebugForm used Javascript. I styled this page before
+                                        adding a note_list class to _person_content.html to allow generation of notes. People and Notes can undergo CRUD operations in this project.
+						
+										<h3 class="major">More projects</h3>
+									
+
+									<section class="features">
+										<article>
+											<a href="miner.html" class="image"><img src="images/mining.jpg" alt="" /></a>
+											<h3 class="major">Bitcoin Miner</h3>
+											<p>Using RPC calls and Python, I made a module which can mine Bitcoin.</p>
+											<a href="miner.html" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="trader.html" class="image"><img src="images/crypto-trading-bot.jpg" alt="" /></a>
+											<h3 class="major">Trading Bot</h3>
+											<p>Using QuantConnect and Python, I built a trading bot which tracks the SPX index with a variable stop loss.</p>
+											<a href="trader.html" class="special">Learn more</a>
+										</article>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+                <section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						
+						<form method="post" action="#">
+							<div class="fields">
+								
+							</div>
+							<ul class="actions">
+								
+							</ul>
+						</form>
+						<ul class="contact">
+							
+							<li class="icon solid fa-envelope"><a href="mailto:danieljryan02@gmail.com">Send me an email!</a></li>
+							
+							<li class="icon brands fa-github"><a href="https://github.com/RealRyanno2022">Check out my Github!</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/daniel-ryan-8957a5186/">Check out my Linkedin!</a></li>
+						</ul>
+						<ul class="copyright">
+							
+						</ul>
+					</div>
+				</section>
+
+
+			</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Twitter Bot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Daniel Ryan</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="project_list.html">Project List</a></li>
+							<li><a href="DanielRyanCV.pdf">CV/Resume</a></li>
+							<li><a href="#footer">Contact Me</a></li>
+				
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Tweepy</h2>
+								<p>A Twitter bot.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Context</h3>
+									<p>Twitter is a social media platform and Tweepy is an API which allows you to create Twitter applications, including bots. The tweepy.py file creates the api and establishes a logger. config.py takes API keys and uses the Tweepy OAuthHandler to verify credientials with the Twitter server.
+										Very often it is tempting to showboat the technologies and intricate design of your projects, but I believe it is just as important to be honest when you have made a mistake.
+										I made a junior error by publishing my original API keys to GitHub. This is problematic because now anyone could put their API keys into a similiar API and run any program under my own Twitter Developer app.
+										This could cost lots of money (By spamming calls) or getting me banned from the platform. I originally attempted to fix this problem by opening the repository in Github Desktop and my first impulse was to revert changes from commit.
+										There were merge conflicts and I added an env virtual environment to run the project locally in this step so I was not able to merge. Then, I attempted to branch the repository in order to create a version 
+										where the API keys were not revealed. This did not work because I could not clone a file by the name of "Python.exe". I solved the problem by regenerating the API keys from the Twitter Developer app and storing them safely.
+										Now the project cannot be accessed remotely unless I give someone the keys.  </p>
+
+									<p>For this project, I used a tutorial from the RealPython website. The bot is able to autoreply to users, fetching mentions and replying "Pleace reach us via DM."
+										The original project filters tweets which contain "Tweepy" to mark them as liked and retweeted. I decided to change this to the words "Kanye" and "Yeezy". However,
+										it became apparent that this would trigger the function too many times and possibly create some sort of spam. I decided to change the parameters to that of a more obscure rapper,
+										"EarlSweatshirt" and his moniker "EarlyMan". The bot also refollows people who have followed the bot once every 60 seconds.  </p>
+
+										<p>While setting up a Dockerfile and running such code proved easy, the part of the project which involved connecting to AWS was not so. I was able to set up an instance and learn how to connect using PuTTY'<s>
+											SSH connection service, using IP's extracted from the Amazon EC2 console. Firstly, the SSH connection would not go through because of the public key, which was confusing because I had made sure to convert my .pem keypair
+											to a .ppk keypair and I was using a properly configured distro. Secondly, Amazon AWS would not allow me to use the EC2 Serial Console to troubleshoot this issue because my running instances
+											went over the limit of vCPU's that were permissible. While this was saddening, the project is still usable if you have a working EC2 instance with SSH login.</p>
+
+									<h3 class="major">More projects</h3>
+									
+
+									<section class="features">
+										<article>
+											<a href="restapi.html" class="image"><img src="images/restapi.jpg" alt="" /></a>
+											<h3 class="major">Flask Notes Api</h3>
+											<p>Using SQLAlchemy, Python, Flask, Connexion, Rest API and JS, CSS and HTML, I created a full stack notes app.</p>
+											<a href="restapi.html" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="trader.html" class="image"><img src="images/crypto-trading-bot.jpg" alt="" /></a>
+											<h3 class="major">Trading Bot</h3>
+											<p>Using QuantConnect and Python, I built a trading bot which tracks the SPX index with a variable stop loss.</p>
+											<a href="trader.html" class="special">Learn more</a>
+										</article>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						
+						<form method="post" action="#">
+							<div class="fields">
+								
+							</div>
+							<ul class="actions">
+								
+							</ul>
+						</form>
+						<ul class="contact">
+							
+							<li class="icon solid fa-envelope"><a href="mailto:danieljryan02@gmail.com">Send me an email!</a></li>
+							
+							<li class="icon brands fa-github"><a href="https://github.com/RealRyanno2022">Check out my Github!</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/daniel-ryan-8957a5186/">Check out my Linkedin!</a></li>
+						</ul>
+						<ul class="copyright">
+							
+						</ul>
+					</div>
+				</section>
+
+
+			</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
