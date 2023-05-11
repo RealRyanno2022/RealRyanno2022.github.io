@@ -37,13 +37,177 @@
 					</nav>
 
 				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
+				<section id="banner">
+					<div class="flex">
+						<p class="header-sub-title" id="word"></p><p class="header-sub-title blink">|</p>
+					</div>
+
+					<style>
+						html, body {
+							background-color: #000;
+							font-family: "Source Sans Pro", Helvetica, sans-serif;
+						}
+						h2, a, p {
+							color: #fff;
+							font-family: Roboto;
+							text-decoration: none;
+							font-family: "Source Sans Pro", Helvetica, sans-serif;
+						}
+						p > a {
+							color: #fd084a;
+						}
+						.blink {
+							animation: blink 0.5s infinite;
+						}
+						@keyframes blink {
+							to { opacity: .0; }
+						}
+						.flex {
+							display: flex;
+							justify-content: center; /* Center the content horizontally */
+							align-items: center; /* Center the content vertically */
+							font-size: 50px;
+							text-align: center; /* Center the text within the flex container */
+						}
+						.header-sub-title {
+							color: #fff;
+							font-family: "Courier";
+							font-size: 80px;
+							padding: 0.1em;
+							font-family: "Source Sans Pro", Helvetica, sans-serif;
+						}
+						.orange {
+							color: orange;
+						}
+					</style>
 				
-							<h2>Hi, my name is Daniel Ryan</h2>
-							<p>I'm a first year <a href="https://www.tcd.ie/courses/undergraduate/courses/management-science-and-information-systems-studies/">Management Science</a> student at Trinity College Dublin</p>
-						</div>
-					</section>
+					<script>
+						const words = ["I am a student", "I am a writer", "I am a developer","I am an economist","I am an investor"];
+						let i = 0;
+						let timer;
+				
+						function typingEffect() {
+							let word = words[i].split("");
+							let wordElement = document.getElementById('word');
+							let isLastWord = (i === words.length - 1); // Check if it's the last word
+							var loopTyping = function() {
+								if (word.length > 0) {
+									wordElement.innerHTML += word.shift();
+								} else {
+									if (isLastWord) {
+										wordElement.classList.add("orange"); // Add the "orange" class to the element
+									}
+									timer = setTimeout(deletingEffect, 2000); // Pause for 2 seconds after word completion
+									return false;
+								}
+								timer = setTimeout(loopTyping, 20);
+							};
+							loopTyping();
+						}
+				
+						function deletingEffect() {
+							let word = words[i].split("");
+							let wordElement = document.getElementById('word');
+							wordElement.classList.remove("orange"); // Remove the "orange" class
+							var loopDeleting = function() {
+								if (word.length > 0) {
+									word.pop();
+									wordElement.innerHTML = word.join("");
+								} else {
+									if (words.length > (i + 1)) {
+										i++;
+									} else {
+										i = 0;
+									}
+									typingEffect();
+									return false;
+								}
+								timer = setTimeout(loopDeleting, 20);
+							};
+							loopDeleting();
+						}
+				
+						typingEffect();
+					</script>
+
+
+
+
+
+
+				</section>
+
+
+
+
+
+
+
+					<!-- <div class="inner">
+						<h2>
+							<span id="prefix">I am a </span><span id="typing-effect"></span>
+						</h2>
+						<p id="description">I'm a first year <a href="https://www.tcd.ie/courses/undergraduate/courses/management-science-and-information-systems-studies/">Management Science</a> student at Trinity College Dublin</p>
+					</div>
+				</section>
+				
+				<style>
+					@keyframes typing {
+						from { width: 0; }
+						to { width: 100%; }
+					}
+				
+					@keyframes backspace {
+						from { width: 100%; }
+						to { width: 0; }
+					}
+				
+					#prefix {
+						display: inline;
+					}
+				
+					#typing-effect {
+						display: inline-block;
+						white-space: nowrap;
+						overflow: hidden;
+						border-right: 0.15em solid #000;
+						width: 0;
+					}
+				
+					#description {
+						display: none;
+					}
+				</style>
+				
+				<script>
+					const typingEffectElement = document.getElementById('typing-effect');
+					const prefixElement = document.getElementById('prefix');
+					const words = ['student', 'writer', 'developer'];
+					let wordIndex = 0;
+					let backspaceDelay = 4000;
+				
+					function typeAndBackspace() {
+						const word = words[wordIndex];
+						typingEffectElement.style.width = '0';
+						typingEffectElement.style.animation = `typing ${word.length / 10}s steps(30, end) forwards`;
+						typingEffectElement.textContent = word;
+						wordIndex = (wordIndex + 1) % words.length;
+						setTimeout(backspace, backspaceDelay);
+					}
+				
+					function backspace() {
+						typingEffectElement.style.animation = 'backspace 2s steps(30, end) forwards';
+						typingEffectElement.textContent = '';
+						setTimeout(typeAndBackspace, 4000);
+					}
+				
+					typeAndBackspace();
+				</script> -->
+				
+				
+				
+				
+								
 
 				<!-- Wrapper -->
 					<section id="wrapper">
@@ -63,14 +227,166 @@
 						<!-- Two -->
 						<section id="two" class="wrapper alt spotlight style2">
 							<div class="inner">
-								<a href="#" class="image"><img src="images/programming.jpg" alt="" /></a>
+								<div class="circle-container">
+									<div class="circle top">
+										<img src="images/java-removebg-preview.png" alt="Java Logo" />
+									</div>
+									<div class="circle right">
+										<img src="images/js.png" alt="JavaScript Logo" />
+									</div>
+									<div class="circle bottom">
+										<img src="images/python-removebg-preview.png" alt="Python Logo" />
+									</div>
+									<div class="circle left">
+										<img src="images\programming-removebg-preview.png" alt="Secondary Logo"></img>
+									</div>
+								</div>
 								<div class="content">
 									<h2 class="major">Programming Experience</h2>
-									<p>I am familiar with Java, Python, R and Javascript.</p>
-									<p>In my own time I have learned SQL, React and React Native.</p>
+									<p class="experience-description">Mouse over a language!</p>
 								</div>
 							</div>
 						</section>
+						
+						<style>
+							#two .inner {
+								display: flex;
+								align-items: center;
+							}
+						
+							.circle-container {
+								position: relative;
+								width: 400px;
+								height: 400px;
+								margin-right: 30px;
+							}
+						
+							.circle {
+								position: absolute;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 120px; /* Increased size of Java and "< >" logos */
+								height: 120px; /* Increased size of Java and "< >" logos */
+								border-radius: 50%;
+								background-color: transparent; /* Set background color to transparent */
+								transition: transform 0.3s; /* Added transition property */
+							}
+						
+							.circle:hover {
+								transform: scale(1.2); /* Increases the size of the logo on hover */
+							}
+						
+							.top {
+								top: 0;
+								left: 50%;
+								transform: translateX(-50%);
+							}
+						
+							.right {
+								top: 50%;
+								right: 0;
+								transform: translateY(-50%);
+							}
+						
+							.bottom {
+								bottom: 0;
+								left: 50%;
+								transform: translateX(-50%);
+							}
+						
+							.left {
+								top: 50%;
+								left: 0;
+								transform: translateY(-50%);
+							}
+						
+							.center {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								width: 120px;
+								height: 120px;
+								border-radius: 50%;
+								background-color: #ccc;
+							}
+						
+							.circle img {
+								max-width: 100%;
+								max-height: 100%;
+								object-fit: contain;
+							}
+						
+							.orange-symbol {
+								font-size: 40px; /* Increased font size of "< >" symbol */
+								color: orange;
+								cursor: pointer; /* Added cursor property */
+							}
+						
+							.content {
+								flex: 1;
+							}
+						
+							.content h2.major {
+								margin-top: 0;
+							}
+						
+							.content p {
+								margin-bottom: 1em;
+							}
+						
+							.blur-effect {
+								filter: blur(2px); /* Added blur effect */
+							}
+						</style>
+	
+						<script>
+						document.addEventListener('DOMContentLoaded', () => {
+							const circles = Array.from(document.getElementsByClassName('circle'));
+							const description = document.querySelector('.experience-description');
+							const major = document.querySelector('.major');
+
+							circles.forEach((circle) => {
+								circle.addEventListener('mouseover', () => {
+									const logoAlt = circle.querySelector('img').getAttribute('alt');
+									switch (logoAlt) {
+										case 'Java Logo':
+											description.textContent = 'My college course introduced me to Java and I have used it in DSA classes. I also have experience working with Gradle, Spring Boot, Kotlin and Android Studio.';
+											major.textContent = 'Java';
+											break;
+										case 'JavaScript Logo':
+											description.textContent = "I rarely use vanilla JavaScript but can code in it. I prefer to use React Native and React.";
+											major.textContent = 'JavaScript';
+											break;
+										case 'Python Logo':
+											description.textContent = 'Python was my first programming language. I have completed several mini-projects in this language. I also know Django.';
+											major.textContent = 'Python';
+											break;
+										case 'Secondary Logo':
+											description.textContent = 'I have experience with R through a Statistics class, as well as SQL and Solidity through online courses. I also know basic Linux setup.';
+											major.textContent = 'HTML/CSS';
+											break;
+										default:
+											description.textContent = 'Mouse over a programming language!';
+											major.textContent = 'Programming Experience';
+											break;
+									}
+								});
+
+									circle.addEventListener('mouseout', () => {
+										description.textContent = 'Mouse over a programming language!';
+										major.textContent = 'Programming Experience';
+									});
+								});
+							});
+						</script>
+	
+  
+
+
+						
+						
 
 						<!-- Three -->
 							<section id="three" class="wrapper spotlight style3">
