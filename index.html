@@ -39,9 +39,10 @@
 				<!-- Banner -->
 				<section id="banner">
 					<div class="flex">
-						<p class="header-title" id="word">Hello, my name is Daniel Ryan</p>
-						<br />
-						<p class="header-sub-title" id="word"></p><p class="header-sub-title blink">|</p>
+						<p class="header-title" id="title">Hello, my name is Daniel Ryan</p>
+					</div>
+					<div class="flex">
+						<p class="header-sub-title" id="sub-title"></p><p class="header-sub-title blink">|</p>
 					</div>
 
 					<style>
@@ -81,7 +82,7 @@
 						.header-title {
 							color: #fff;
 							font-family: "Courier";
-							font-size: 80px;
+							font-size: 50px;
 							padding: 0.1em;
 							font-family: "Source Sans Pro", Helvetica, sans-serif;
 						}
@@ -90,131 +91,57 @@
 						}
 					</style>
 				
-					<script>
-						const words = ["I am a student", "I am a writer", "I am a developer","I am an economist","I am an entrepreneur"];
-						let i = 0;
-						let timer;
-				
-						function typingEffect() {
-							let word = words[i].split("");
-							let wordElement = document.getElementById('word');
-							let isLastWord = (i === words.length - 1); // Check if it's the last word
-							var loopTyping = function() {
-								if (word.length > 0) {
-									wordElement.innerHTML += word.shift();
-								} else {
-									if (isLastWord) {
-										wordElement.classList.add("orange"); // Add the "orange" class to the element
-									}
-									timer = setTimeout(deletingEffect, 2000); // Pause for 2 seconds after word completion
-									return false;
-								}
-								timer = setTimeout(loopTyping, 20);
-							};
-							loopTyping();
-						}
-				
-						function deletingEffect() {
-							let word = words[i].split("");
-							let wordElement = document.getElementById('word');
-							wordElement.classList.remove("orange"); // Remove the "orange" class
-							var loopDeleting = function() {
-								if (word.length > 0) {
-									word.pop();
-									wordElement.innerHTML = word.join("");
-								} else {
-									if (words.length > (i + 1)) {
-										i++;
-									} else {
-										i = 0;
-									}
-									typingEffect();
-									return false;
-								}
-								timer = setTimeout(loopDeleting, 20);
-							};
-							loopDeleting();
-						}
-				
-						typingEffect();
-					</script>
-
-
-
-
-
-
-				</section>
-
-
-
-
-
-
-
-					<!-- <div class="inner">
-						<h2>
-							<span id="prefix">I am a </span><span id="typing-effect"></span>
-						</h2>
-						<p id="description">I'm a first year <a href="https://www.tcd.ie/courses/undergraduate/courses/management-science-and-information-systems-studies/">Management Science</a> student at Trinity College Dublin</p>
-					</div>
-				</section>
-				
-				<style>
-					@keyframes typing {
-						from { width: 0; }
-						to { width: 100%; }
-					}
-				
-					@keyframes backspace {
-						from { width: 100%; }
-						to { width: 0; }
-					}
-				
-					#prefix {
-						display: inline;
-					}
-				
-					#typing-effect {
-						display: inline-block;
-						white-space: nowrap;
-						overflow: hidden;
-						border-right: 0.15em solid #000;
-						width: 0;
-					}
-				
-					#description {
-						display: none;
-					}
-				</style>
-				
 				<script>
-					const typingEffectElement = document.getElementById('typing-effect');
-					const prefixElement = document.getElementById('prefix');
-					const words = ['student', 'writer', 'developer'];
-					let wordIndex = 0;
-					let backspaceDelay = 4000;
-				
-					function typeAndBackspace() {
-						const word = words[wordIndex];
-						typingEffectElement.style.width = '0';
-						typingEffectElement.style.animation = `typing ${word.length / 10}s steps(30, end) forwards`;
-						typingEffectElement.textContent = word;
-						wordIndex = (wordIndex + 1) % words.length;
-						setTimeout(backspace, backspaceDelay);
+					const words = ["I am a student", "I am a writer", "I am a developer","I am an economist","I am an entrepreneur"];
+					let i = 0;
+					let timer;
+			
+					function typingEffect() {
+						let word = words[i].split("");
+						let subTitleElement = document.getElementById('sub-title');
+						let isLastWord = (i === words.length - 1); // Check if it's the last word
+						var loopTyping = function() {
+							if (word.length > 0) {
+								subTitleElement.innerHTML += word.shift();
+							} else {
+								if (isLastWord) {
+									subTitleElement.classList.add("orange"); // Add the "orange" class to the element
+								}
+								timer = setTimeout(deletingEffect, 2000); // Pause for 2 seconds after word completion
+								return false;
+							}
+							timer = setTimeout(loopTyping, 20);
+						};
+						loopTyping();
 					}
-				
-					function backspace() {
-						typingEffectElement.style.animation = 'backspace 2s steps(30, end) forwards';
-						typingEffectElement.textContent = '';
-						setTimeout(typeAndBackspace, 4000);
+			
+					function deletingEffect() {
+						let word = words[i].split("");
+						let subTitleElement = document.getElementById('sub-title');
+						subTitleElement.classList.remove("orange"); // Remove the "orange" class
+						var loopDeleting = function() {
+							if (word.length > 0) {
+								word.pop();
+								subTitleElement.innerHTML = word.join("");
+							} else {
+								if (words.length > (i + 1)) {
+									i++;
+								} else {
+									i = 0;
+								}
+								typingEffect();
+								return false;
+							}
+							timer = setTimeout(loopDeleting, 20);
+						};
+						loopDeleting();
 					}
-				
-					typeAndBackspace();
-				</script> -->
-				
-				
-				
+			
+					typingEffect();
+				</script>
+			</section>
+
+
 				
 								
 
@@ -265,25 +192,39 @@
 						
 							.circle-container {
 								position: relative;
-								width: 400px;
-								height: 400px;
+								width: 500px;
+								height: 500px;
 								margin-right: 30px;
 							}
+
 						
 							.circle {
 								position: absolute;
 								display: flex;
 								align-items: center;
 								justify-content: center;
-								width: 120px; /* Increased size of Java and "< >" logos */
-								height: 120px; /* Increased size of Java and "< >" logos */
+								width: 150px; /* Increased size to accommodate enlarged logos */
+								height: 150px; /* Increased size to accommodate enlarged logos */
 								border-radius: 50%;
-								background-color: transparent; /* Set background color to transparent */
-								transition: transform 0.3s; /* Added transition property */
+								background-color: transparent;
+								transition: transform 0.3s;
 							}
+
+						.circle img {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 100%;
+							transition: transform 0.3s; /* Transition property moved here */
+						}
+
+						.circle img:hover {
+							transform: scale(0.9); /* Hover effect applied here */
+						}
 						
 							.circle:hover {
-								transform: scale(1.2); /* Increases the size of the logo on hover */
+								transform: scale(0.9); /* Increases the size of the logo on hover */
 							}
 						
 							.top {
