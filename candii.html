@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Candii</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Solid State</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="project_list.html">Project List</a></li>
+								<li><a href="DanielRyanCV.pdf">CV/Resume</a></li>
+								<li><a href="#footer">Contact Me</a></li>
+					
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Candii Vapes</h2>
+								<p>FERN Stack Mobile Application </p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Context</h3>
+									<p> As of May 2023, this is my largest project so far. My granddad operates an e-cigarette shop. I noticed that there was a gap in the market for an e-cigarette app where people can re-up with the click of a button  
+                                        Most vape websites don't take advantage of the fact that multiple vapes can fit in an envelope - which can reduce the shipping costs for customers if they buy multiple vapes. I also innovated on the conventoinal e-cigarette e-commerce model
+                                        by introducing a subscription model. So for a reduced monthly or yearly subscription which is cheaper compared to buying vapes normally, the customer can get their favourite flavours of vape sent directly to their house automatically. They can change their flavours any time.
+                                        This was originally going to be an app which allows you to search for music videos by specified artists, but since I have worked in my granddad's shop and have e-commerce experience, and I wanted to start another business, I figured that Candii vapes would make more sense. 
+                                        The app is a React Native application ran on Expo and uses the navigation library to navigate between screens. The backend is a Node.js server which uses Express.js to handle requests and MongoDB to store data. The app is hosted on Heroku and the database was initially hosted on PostgreSQL. 
+                                        However, I then decided to make a landing page in Next.js and React TypeScript to promote the app - which collects people's names and e-mail addresses to send them launch updates for Candii. I enjoy learning from the Fireshp youtube channel and he advocates for the use of Firestore by Google.
+                                        I was so impressed by the ease of use of Firestore that I decided to migrate the database from PostgreSQL to Firestore. I also used Firebase Authentication to allow users to sign up and log in to the app. I will use Firebase Storage to store images of the vapes to reduce the package size and allow the user to download the app faster.
+                                        The app uses a Node.js and Express.js backend to initiate CRUD operations - Users can delete or create accounts, which tracks their purchase history and allows them to repurchase vapes with a simple click. 
+                                        The most obvious payment integration system for an e-commerce application like mine would be Stripe, but unfortunately Stripe will not allow you to sell e-cigarettes, so I will instead use the SDK of a company called Braintree, who was acquired by PayPal. They have a braintree-drop-in UI which allows you to easily integrate a payment system into your app.
+                                        After some progress into the appliaction, I encountered a large error with deprecating PropTypes which encouraged me to use TypeScript. I made a rookie mistake in not using TypeScript from the start, but now that I have it I can't see myself going back to JavaScript. I have also used the React Native Elements library to make the app look more professional.
+                                        Candii will be marketed using organically using a give-away on Instagram. I will give away 88 euro's worth of vape to one lucky winner who downloads the Candii app and registers on the popup.
+										
+
+
+
+									</p>
+									<h3 class="major">More projects</h3>
+									
+                                    <section class="features">
+									<style>
+                                        .button {
+                                            display: inline-block;
+                                            padding: 10px 20px;
+                                            text-align: center;
+                                            text-decoration: none;
+                                            background-color: #008CBA;
+                                            color: white;
+                                        }
+                                    
+                                        .special {
+                                            font-weight: bold;
+                                        }
+                                    
+                                        .large-button {
+                                            font-size: 20px;
+                                        }
+                                    </style>
+        
+                                    <div class="buttons">
+                                        <a href="frontend_projects.html" class="button special large-button">Other Backend Projects</a>
+                                    </div>
+                                    </section>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+                <section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						
+						<form method="post" action="#">
+							<div class="fields">
+								
+							</div>
+							<ul class="actions">
+								
+							</ul>
+						</form>
+						<ul class="contact">
+							
+							<li class="icon solid fa-envelope"><a href="mailto:danieljryan02@gmail.com">Send me an email!</a></li>
+							
+							<li class="icon brands fa-github"><a href="https://github.com/RealRyanno2022">Check out my Github!</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/daniel-ryan-8957a5186/">Check out my Linkedin!</a></li>
+						</ul>
+						<ul class="copyright">
+							
+						</ul>
+					</div>
+				</section>
+
+
+			</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
