@@ -1,425 +1,87 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Ryan - Aspiring Linux Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77b6ea 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+        }
+        .experience, .education, .projects {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
 
-<html>
-	<head>
-		<title>Daniel Ryan's Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<p></p>
-	</head>
-	<body class="is-preload">
+<header>
+    <div class="container">
+        <h1>Daniel Ryan - Aspiring Linux Engineer | MSISS Student at TCD | Full Stack Developer</h1>
+    </div>
+</header>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<section class="container">
+    <div class="experience">
+        <h2>Experience</h2>
+        <p><strong>Assistant Manager</strong> - Family Business (May 2021 - Present)</p>
+        <p>Location: County Wexford, Ireland | E-cigarette service, sales and repair</p>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Daniel Ryan </a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        <p><strong>Founder</strong> - Candii (May 2023 - Aug 2023)</p>
+        <p>MVP for e-commerce platform, focus on e-cigarettes | Skills: Node.js, Full-Stack Development</p>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="backend_projects.html">Project List</a></li>
-								<li><a href="DanielRyanCV.pdf">CV/Resume</a></li>
-								<li><a href="#footer">Contact Me</a></li>
-					
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+        <p><strong>Enumerator</strong> - CSO (Central Statistics Office Ireland) (Apr 2022 - Jun 2022)</p>
+        <p>Delivery and collection of Census forms over 10 weeks to householders in local area | Skills: Survey Management</p>
 
-				<!-- Banner -->
-				<section id="banner">
-					<div class="flex">
-						<p class="header-title" id="title">Hello, my name is Daniel Ryan</p>
-					</div>
-					<div class="flex">
-						<p class="header-sub-title" id="sub-title"></p><p class="header-sub-title blink">|</p>
-					</div>
+        <p><strong>Founder</strong> - Ryan Enterprises (Aug 2020 - Mar 2022)</p>
+        <p>Created, designed, and managed "no-code" Shopify stores with traffic exceeding 3000 visitors per month | Skills: Shopify, JavaScript</p>
 
-					<style>
-						html, body {
-							background-color: #000;
-							font-family: "Source Sans Pro", Helvetica, sans-serif;
-						}
-						h2, a, p {
-							color: #fff;
-							font-family: Roboto;
-							text-decoration: none;
-							font-family: "Source Sans Pro", Helvetica, sans-serif;
-						}
-						p > a {
-							color: #fd084a;
-						}
-						.blink {
-							animation: blink 0.5s infinite;
-						}
-						@keyframes blink {
-							to { opacity: .0; }
-						}
-						.flex {
-							display: flex;
-							justify-content: center; /* Center the content horizontally */
-							align-items: center; /* Center the content vertically */
-							font-size: 50px;
-							text-align: center; /* Center the text within the flex container */
-						}
-						.header-sub-title {
-							color: #fff;
-							font-family: "Courier";
-							font-size: 80px;
-							padding: 0.1em;
-							font-family: "Source Sans Pro", Helvetica, sans-serif;
-						}
-						.header-title {
-							color: #fff;
-							font-family: "Courier";
-							font-size: 50px;
-							padding: 0.1em;
-							font-family: "Source Sans Pro", Helvetica, sans-serif;
-						}
-						.orange {
-							color: orange;
-						}
-					</style>
-				
-				<script>
-					const words = ["I am a student", "I am a writer", "I am a developer","I am an economist","I am an entrepreneur"];
-					let i = 0;
-					let timer;
-			
-					function typingEffect() {
-						let word = words[i].split("");
-						let subTitleElement = document.getElementById('sub-title');
-						let isLastWord = (i === words.length - 1); // Check if it's the last word
-						var loopTyping = function() {
-							if (word.length > 0) {
-								subTitleElement.innerHTML += word.shift();
-							} else {
-								if (isLastWord) {
-									subTitleElement.classList.add("orange"); // Add the "orange" class to the element
-								}
-								timer = setTimeout(deletingEffect, 2000); // Pause for 2 seconds after word completion
-								return false;
-							}
-							timer = setTimeout(loopTyping, 20);
-						};
-						loopTyping();
-					}
-			
-					function deletingEffect() {
-						let word = words[i].split("");
-						let subTitleElement = document.getElementById('sub-title');
-						subTitleElement.classList.remove("orange"); // Remove the "orange" class
-						var loopDeleting = function() {
-							if (word.length > 0) {
-								word.pop();
-								subTitleElement.innerHTML = word.join("");
-							} else {
-								if (words.length > (i + 1)) {
-									i++;
-								} else {
-									i = 0;
-								}
-								typingEffect();
-								return false;
-							}
-							timer = setTimeout(loopDeleting, 20);
-						};
-						loopDeleting();
-					}
-			
-					typingEffect();
-				</script>
-			</section>
+        <p><strong>General Operative</strong> - Integer Holdings Corporation (Jun 2021 - Sep 2021)</p>
+        <p>High responsibility factory packaging role involving full-body PPE.</p>
+    </div>
 
+    <div class="education">
+        <h2>Education</h2>
+        <p><strong>Trinity College Dublin</strong> - Bachelor of Arts - BA, Management Science and Information Systems Studies (Sep 2022 - May 2026)</p>
+        <p>625 point course</p>
+    </div>
 
-				
-								
+    <div class="projects">
+        <h2>Projects</h2>
+        <p><strong>PDST Young Economist of the Year 2021</strong></p>
+        <p>"Umbrella analysis of e-commerce and its economic sustainability for SMEs" | Skills: Microsoft PowerPoint, Research Skills</p>
+    </div>
+</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- One -->
-						<section id="one" class="wrapper spotlight style1">
-							<div class="inner">
-								<a href="#" class="image"><img src="images/me4.jpg" alt="" /></a>
-								<div class="content">
-									<h2 class="major">About me</h2>
-									<p>I am pragmatic, hard-working and creative. </p>
-									<a href="DanielRyanCV.pdf" class="special">CV/Resume</a>
-								</div>
-							</div>
-						</section>
-
-						<!-- Two -->
-						<section id="two" class="wrapper alt spotlight style2">
-							<div class="inner">
-								<div class="circle-container">
-									<div class="circle top">
-										<img src="images/java-removebg-preview.png" alt="Java Logo" />
-									</div>
-									<div class="circle right">
-										<img src="images/js.png" alt="JavaScript Logo" />
-									</div>
-									<div class="circle bottom">
-										<img src="images/python-removebg-preview.png" alt="Python Logo" />
-									</div>
-									<div class="circle left">
-										<img src="images\programming-removebg-preview.png" alt="Secondary Logo"></img>
-									</div>
-								</div>
-								<div class="content">
-									<h2 class="major">Programming Experience</h2>
-									<p class="experience-description">Mouse over a language!</p>
-								</div>
-							</div>
-						</section>
-						
-						<style>
-							#two .inner {
-								display: flex;
-								align-items: center;
-							}
-						
-							.circle-container {
-								position: relative;
-								width: 500px;
-								height: 500px;
-								margin-right: 30px;
-							}
-
-						
-							.circle {
-								position: absolute;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								width: 150px; /* Increased size to accommodate enlarged logos */
-								height: 150px; /* Increased size to accommodate enlarged logos */
-								border-radius: 50%;
-								background-color: transparent;
-								transition: transform 0.3s;
-							}
-
-						.circle img {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							width: 100%;
-							height: 100%;
-							transition: transform 0.3s; /* Transition property moved here */
-						}
-
-						.circle img:hover {
-							transform: scale(0.9); /* Hover effect applied here */
-						}
-						
-							.circle:hover {
-								transform: scale(0.9); /* Increases the size of the logo on hover */
-							}
-						
-							.top {
-								top: 0;
-								left: 50%;
-								transform: translateX(-50%);
-							}
-						
-							.right {
-								top: 50%;
-								right: 0;
-								transform: translateY(-50%);
-							}
-						
-							.bottom {
-								bottom: 0;
-								left: 50%;
-								transform: translateX(-50%);
-							}
-						
-							.left {
-								top: 50%;
-								left: 0;
-								transform: translateY(-50%);
-							}
-						
-							.center {
-								position: absolute;
-								top: 50%;
-								left: 50%;
-								transform: translate(-50%, -50%);
-								width: 120px;
-								height: 120px;
-								border-radius: 50%;
-								background-color: #ccc;
-							}
-						
-							.circle img {
-								max-width: 100%;
-								max-height: 100%;
-								object-fit: contain;
-							}
-						
-							.orange-symbol {
-								font-size: 40px; /* Increased font size of "< >" symbol */
-								color: orange;
-								cursor: pointer; /* Added cursor property */
-							}
-						
-							.content {
-								flex: 1;
-							}
-						
-							.content h2.major {
-								margin-top: 0;
-							}
-						
-							.content p {
-								margin-bottom: 1em;
-							}
-						
-							.blur-effect {
-								filter: blur(2px); /* Added blur effect */
-							}
-						</style>
-	
-						<script>
-						document.addEventListener('DOMContentLoaded', () => {
-							const circles = Array.from(document.getElementsByClassName('circle'));
-							const description = document.querySelector('.experience-description');
-							const major = document.querySelector('.major');
-
-							circles.forEach((circle) => {
-								circle.addEventListener('mouseover', () => {
-									const logoAlt = circle.querySelector('img').getAttribute('alt');
-									switch (logoAlt) {
-										case 'Java Logo':
-											description.textContent = 'My college course introduced me to Java and I have used it in DSA classes. I also have experience working with Gradle, Spring Boot, Kotlin and Android Studio.';
-											major.textContent = 'Java';
-											break;
-										case 'JavaScript Logo':
-											description.textContent = "I rarely use vanilla JavaScript but can code in it. I prefer to use React Native and React.";
-											major.textContent = 'JavaScript';
-											break;
-										case 'Python Logo':
-											description.textContent = 'Python was my first programming language. I have completed several mini-projects in this language. I also know Django.';
-											major.textContent = 'Python';
-											break;
-										case 'Secondary Logo':
-											description.textContent = 'I have experience with R through a Statistics class, as well as SQL and Solidity through online courses. I also know basic Linux setup.';
-											major.textContent = 'HTML/CSS';
-											break;
-										default:
-											description.textContent = 'Mouse over a programming language!';
-											major.textContent = 'Programming Experience';
-											break;
-									}
-								});
-
-									circle.addEventListener('mouseout', () => {
-										description.textContent = 'Mouse over a programming language!';
-										major.textContent = 'Programming Experience';
-									});
-								});
-							});
-						</script>
-	
-  
-
-
-						
-						
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a> -->
-									<div class="content">
-										<h2 class="major">Current Focus</h2>
-										<p>I plan to be very active on Github in the coming months. I am interested in joining the Innovation and Entrepreneurship module hosted in Trinity. If you also want to do this module, contact me!</p>
-										<a href="https://www.tcd.ie/tangent/programmes/undergraduate/undergraduate-certificate/" class="special">The Module</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-						<style>
-							.large-button {
-								width: 50%;
-								align-items: center;
-								font-size: 1.5em;
-								text-align: center;
-							}
-							.buttons {
-        						text-align:  center;
-    						}				
-							.button {
-								text-align: center;
-							}			
-						</style>
-						
-						<section id="four" class="wrapper alt style1">
-							<div class="inner">
-								<h2 class="major">My Projects</h2>
-								<p>I have built full-stack and just backend or frontend projects. Generally my frontend projects are longer and more advanced.</p>
-								<ul class="buttons">
-									<a href="backend_projects.html" class="button special large-button">Browse All</a>
-								</div>
-								</ul>
-							</div>
-						</section>
-
-
-						
-
-					</section>
-
-				<!-- Footer -->
-				<section id="footer">
-					<div class="inner">
-						<h2 class="major">Get in touch</h2>
-						
-						<form method="post" action="#">
-							<div class="fields">
-								
-							</div>
-							<ul class="actions">
-								
-							</ul>
-						</form>
-						<ul class="contact">
-							
-							<li class="icon solid fa-envelope"><a href="mailto:danieljryan02@gmail.com">Send me an email!</a></li>
-							
-							<li class="icon brands fa-github"><a href="https://github.com/RealRyanno2022">Check out my Github!</a></li>
-							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/daniel-ryan-8957a5186/">Check out my Linkedin!</a></li>
-						</ul>
-						<ul class="copyright">
-							
-						</ul>
-					</div>
-				</section>
-
-
-			</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
+
